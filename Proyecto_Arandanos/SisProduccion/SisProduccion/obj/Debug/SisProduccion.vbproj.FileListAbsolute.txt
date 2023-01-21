@@ -1,0 +1,16 @@
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\bin\Debug\SisProduccion.exe.config
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\bin\Debug\SisProduccion.exe
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\bin\Debug\SisProduccion.pdb
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\bin\Debug\SisProduccion.xml
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.vbprojAssemblyReference.cache
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FUser.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.Resources.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.vbproj.GenerateResource.cache
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.vbproj.CoreCompileInputs.cache
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.exe
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.xml
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.pdb
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FPersonal.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FLogin.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FMenuP.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FPuesto.resources
