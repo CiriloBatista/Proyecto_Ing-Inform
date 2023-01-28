@@ -3194,11 +3194,17 @@ Namespace arandanosDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT usuario, nombre, contraseña, nivel, id_Usuarios FROM Usuarios"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT usuario, nombre, contraseña, nivel, id_Usuarios "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM Usuarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE usu"& _ 
+                "ario = ?"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("usuario", Global.System.Data.OleDb.OleDbType.WChar, 20, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "usuario", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3220,6 +3226,40 @@ Namespace arandanosDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As arandanosDataSet.UsuariosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As arandanosDataSet.UsuariosDataTable = New arandanosDataSet.UsuariosDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByUsuario(ByVal dataTable As arandanosDataSet.UsuariosDataTable, ByVal usuario As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (usuario Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("usuario")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(usuario,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal usuario As String) As arandanosDataSet.UsuariosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (usuario Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("usuario")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(usuario,String)
+            End If
             Dim dataTable As arandanosDataSet.UsuariosDataTable = New arandanosDataSet.UsuariosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
