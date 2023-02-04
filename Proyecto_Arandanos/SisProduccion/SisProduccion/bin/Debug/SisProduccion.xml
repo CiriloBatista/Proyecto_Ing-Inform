@@ -22,6 +22,11 @@ SisProduccion
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:SisProduccion.My.Resources.Resources.roquin">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:SisProduccion.arandanosDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
@@ -47,6 +52,16 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:SisProduccion.arandanosDataSet.CubetasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.CosechaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:SisProduccion.arandanosDataSet.PersonalRow">
 <summary>
 Represents strongly named DataRow class.
@@ -63,6 +78,16 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:SisProduccion.arandanosDataSet.PuestoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.CubetasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.CosechaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -87,6 +112,16 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:SisProduccion.arandanosDataSet.CubetasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.CosechaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:SisProduccion.arandanosDataSetTableAdapters.PersonalTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -103,6 +138,16 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:SisProduccion.arandanosDataSetTableAdapters.PuestoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSetTableAdapters.CubetasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSetTableAdapters.CosechaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

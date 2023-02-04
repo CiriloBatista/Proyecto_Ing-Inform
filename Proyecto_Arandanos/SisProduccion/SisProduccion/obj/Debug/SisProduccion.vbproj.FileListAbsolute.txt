@@ -15,3 +15,6 @@ C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FLogin
 C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FMenuP.resources
 C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FPuesto.resources
 C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FormLoginPractica.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FCubetas.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FCosecha.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FSector.resources

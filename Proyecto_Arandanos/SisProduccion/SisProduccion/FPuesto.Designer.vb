@@ -39,7 +39,6 @@ Partial Class FPuesto
         Me.PuestoDataGridView = New System.Windows.Forms.DataGridView()
         Me.Id_Puesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BSalir = New System.Windows.Forms.Button()
         Me.BNuevo = New System.Windows.Forms.Button()
         Me.BEliminar = New System.Windows.Forms.Button()
         Me.BGuardar = New System.Windows.Forms.Button()
@@ -194,23 +193,6 @@ Partial Class FPuesto
         Me.Nombre.ReadOnly = True
         Me.Nombre.Width = 150
         '
-        'BSalir
-        '
-        Me.BSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.BSalir.Image = CType(resources.GetObject("BSalir.Image"), System.Drawing.Image)
-        Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(390, 86)
-        Me.BSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BSalir.Name = "BSalir"
-        Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.BSalir.Size = New System.Drawing.Size(200, 75)
-        Me.BSalir.TabIndex = 22
-        Me.BSalir.Text = "Regresar"
-        Me.BSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BSalir.UseVisualStyleBackColor = False
-        '
         'BNuevo
         '
         Me.BNuevo.BackColor = System.Drawing.Color.White
@@ -259,7 +241,6 @@ Partial Class FPuesto
         Me.Controls.Add(Me.BGuardar)
         Me.Controls.Add(Me.BEliminar)
         Me.Controls.Add(Me.BNuevo)
-        Me.Controls.Add(Me.BSalir)
         Me.Controls.Add(Me.PuestoDataGridView)
         Me.Controls.Add(Me.IdTextBox)
         Me.Controls.Add(Me.Label1)
@@ -291,7 +272,6 @@ Partial Class FPuesto
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PuestoDataGridView As DataGridView
-    Friend WithEvents BSalir As Button
     Friend WithEvents BNuevo As Button
     Friend WithEvents Id_Puesto As DataGridViewTextBoxColumn
     Friend WithEvents Nombre As DataGridViewTextBoxColumn

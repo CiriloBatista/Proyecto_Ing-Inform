@@ -25,34 +25,40 @@ Partial Class FLogin
         Me.components = New System.ComponentModel.Container()
         Dim UsuarioLabel As System.Windows.Forms.Label
         Dim ContraseñaLabel As System.Windows.Forms.Label
+        Dim Id_UsuariosLabel As System.Windows.Forms.Label
+        Dim NivelLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FLogin))
         Me.Btn_Cancelar = New System.Windows.Forms.Button()
         Me.LUsuario = New System.Windows.Forms.Label()
         Me.usuario_textBox = New System.Windows.Forms.TextBox()
         Me.Btn_Ingresar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LoginUsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.password = New System.Windows.Forms.Label()
         Me.passwordTextBox = New System.Windows.Forms.TextBox()
         Me.BSalir = New System.Windows.Forms.Button()
-        Me.ArandanosDataSet = New SisProduccion.arandanosDataSet()
+        Me.UsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ArandanosDataSet = New SisProduccion.arandanosDataSet()
+        Me.ContrasenaTextBox = New System.Windows.Forms.TextBox()
         Me.UsuariosTableAdapter = New SisProduccion.arandanosDataSetTableAdapters.UsuariosTableAdapter()
         Me.TableAdapterManager = New SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager()
-        Me.UsuarioTextBox = New System.Windows.Forms.TextBox()
-        Me.ContrasenaTextBox = New System.Windows.Forms.TextBox()
+        Me.Id_UsuariosTextBox = New System.Windows.Forms.TextBox()
+        Me.LoginUsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NivelComboBox = New System.Windows.Forms.ComboBox()
         UsuarioLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
+        Id_UsuariosLabel = New System.Windows.Forms.Label()
+        NivelLabel = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LoginUsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LoginUsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsuarioLabel
         '
         UsuarioLabel.AutoSize = True
-        UsuarioLabel.Location = New System.Drawing.Point(220, 85)
+        UsuarioLabel.Location = New System.Drawing.Point(203, 79)
         UsuarioLabel.Name = "UsuarioLabel"
         UsuarioLabel.Size = New System.Drawing.Size(59, 17)
         UsuarioLabel.TabIndex = 15
@@ -61,11 +67,29 @@ Partial Class FLogin
         'ContraseñaLabel
         '
         ContraseñaLabel.AutoSize = True
-        ContraseñaLabel.Location = New System.Drawing.Point(196, 129)
+        ContraseñaLabel.Location = New System.Drawing.Point(179, 109)
         ContraseñaLabel.Name = "ContraseñaLabel"
         ContraseñaLabel.Size = New System.Drawing.Size(83, 17)
         ContraseñaLabel.TabIndex = 16
         ContraseñaLabel.Text = "contraseña:"
+        '
+        'Id_UsuariosLabel
+        '
+        Id_UsuariosLabel.AutoSize = True
+        Id_UsuariosLabel.Location = New System.Drawing.Point(179, 51)
+        Id_UsuariosLabel.Name = "Id_UsuariosLabel"
+        Id_UsuariosLabel.Size = New System.Drawing.Size(83, 17)
+        Id_UsuariosLabel.TabIndex = 17
+        Id_UsuariosLabel.Text = "id Usuarios:"
+        '
+        'NivelLabel
+        '
+        NivelLabel.AutoSize = True
+        NivelLabel.Location = New System.Drawing.Point(221, 135)
+        NivelLabel.Name = "NivelLabel"
+        NivelLabel.Size = New System.Drawing.Size(41, 17)
+        NivelLabel.TabIndex = 18
+        NivelLabel.Text = "nivel:"
         '
         'Btn_Cancelar
         '
@@ -90,6 +114,7 @@ Partial Class FLogin
         'usuario_textBox
         '
         Me.usuario_textBox.BackColor = System.Drawing.Color.White
+        Me.usuario_textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.usuario_textBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.usuario_textBox.Location = New System.Drawing.Point(285, 216)
         Me.usuario_textBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -120,17 +145,13 @@ Partial Class FLogin
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(503, 103)
+        Me.PictureBox1.Location = New System.Drawing.Point(141, 11)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(294, 173)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'LoginUsBindingSource
-        '
-        Me.LoginUsBindingSource.DataMember = "LoginUs"
         '
         'password
         '
@@ -144,6 +165,7 @@ Partial Class FLogin
         '
         'passwordTextBox
         '
+        Me.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.passwordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.passwordTextBox.Location = New System.Drawing.Point(285, 262)
         Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -172,15 +194,31 @@ Partial Class FLogin
         Me.BSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BSalir.UseVisualStyleBackColor = False
         '
-        'ArandanosDataSet
+        'UsuarioTextBox
         '
-        Me.ArandanosDataSet.DataSetName = "arandanosDataSet"
-        Me.ArandanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.UsuarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "usuario", True))
+        Me.UsuarioTextBox.Location = New System.Drawing.Point(268, 76)
+        Me.UsuarioTextBox.Name = "UsuarioTextBox"
+        Me.UsuarioTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.UsuarioTextBox.TabIndex = 16
         '
         'UsuariosBindingSource
         '
         Me.UsuariosBindingSource.DataMember = "Usuarios"
         Me.UsuariosBindingSource.DataSource = Me.ArandanosDataSet
+        '
+        'ArandanosDataSet
+        '
+        Me.ArandanosDataSet.DataSetName = "arandanosDataSet"
+        Me.ArandanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ContrasenaTextBox
+        '
+        Me.ContrasenaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "contraseña", True))
+        Me.ContrasenaTextBox.Location = New System.Drawing.Point(268, 104)
+        Me.ContrasenaTextBox.Name = "ContrasenaTextBox"
+        Me.ContrasenaTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.ContrasenaTextBox.TabIndex = 17
         '
         'UsuariosTableAdapter
         '
@@ -189,35 +227,45 @@ Partial Class FLogin
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CubetasTableAdapter = Nothing
         Me.TableAdapterManager.PersonalTableAdapter = Nothing
         Me.TableAdapterManager.PuestoTableAdapter = Nothing
         Me.TableAdapterManager.SectorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsuariosTableAdapter = Me.UsuariosTableAdapter
         '
-        'UsuarioTextBox
+        'Id_UsuariosTextBox
         '
-        Me.UsuarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "usuario", True))
-        Me.UsuarioTextBox.Location = New System.Drawing.Point(285, 82)
-        Me.UsuarioTextBox.Name = "UsuarioTextBox"
-        Me.UsuarioTextBox.Size = New System.Drawing.Size(100, 22)
-        Me.UsuarioTextBox.TabIndex = 16
+        Me.Id_UsuariosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "id_Usuarios", True))
+        Me.Id_UsuariosTextBox.Location = New System.Drawing.Point(268, 48)
+        Me.Id_UsuariosTextBox.Name = "Id_UsuariosTextBox"
+        Me.Id_UsuariosTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.Id_UsuariosTextBox.TabIndex = 18
         '
-        'ContrasenaTextBox
+        'LoginUsBindingSource
         '
-        Me.ContrasenaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "contraseña", True))
-        Me.ContrasenaTextBox.Location = New System.Drawing.Point(285, 126)
-        Me.ContrasenaTextBox.Name = "ContrasenaTextBox"
-        Me.ContrasenaTextBox.Size = New System.Drawing.Size(100, 22)
-        Me.ContrasenaTextBox.TabIndex = 17
+        Me.LoginUsBindingSource.DataMember = "LoginUs"
+        '
+        'NivelComboBox
+        '
+        Me.NivelComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "nivel", True))
+        Me.NivelComboBox.FormattingEnabled = True
+        Me.NivelComboBox.Location = New System.Drawing.Point(268, 132)
+        Me.NivelComboBox.Name = "NivelComboBox"
+        Me.NivelComboBox.Size = New System.Drawing.Size(121, 24)
+        Me.NivelComboBox.TabIndex = 19
         '
         'FLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(909, 450)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(573, 450)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(NivelLabel)
+        Me.Controls.Add(Me.NivelComboBox)
+        Me.Controls.Add(Id_UsuariosLabel)
+        Me.Controls.Add(Me.Id_UsuariosTextBox)
         Me.Controls.Add(ContraseñaLabel)
         Me.Controls.Add(Me.ContrasenaTextBox)
         Me.Controls.Add(UsuarioLabel)
@@ -232,9 +280,9 @@ Partial Class FLogin
         Me.Name = "FLogin"
         Me.Text = "Iniciar Sesion"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LoginUsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LoginUsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -255,4 +303,6 @@ Partial Class FLogin
     Friend WithEvents TableAdapterManager As arandanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents UsuarioTextBox As TextBox
     Friend WithEvents ContrasenaTextBox As TextBox
+    Friend WithEvents Id_UsuariosTextBox As TextBox
+    Friend WithEvents NivelComboBox As ComboBox
 End Class

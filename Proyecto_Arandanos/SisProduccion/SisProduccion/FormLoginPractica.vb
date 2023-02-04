@@ -1,5 +1,5 @@
 ﻿Public Class FormLoginPractica
-    Private Sub UsuariosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles UsuariosBindingNavigatorSaveItem.Click
+    Private Sub UsuariosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.UsuariosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ArandanosDataSet)
@@ -27,6 +27,8 @@
         Else
             If TxtPass.Text = ContrasenaTextBox.Text Then
                 MsgBox("Bienvenido " & UsuarioTextBox.Text) 'El simbolo "&" concatena texto con funciones'
+                IdUsr = Id_UsuariosTextBox.Text
+                User = UsuarioTextBox.Text
             Else
                 MsgBox("Usuario o Contraseña no validos") 'Podemos ver el video 8 de la sesion extra!'
             End If

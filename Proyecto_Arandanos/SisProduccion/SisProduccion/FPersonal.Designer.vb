@@ -29,11 +29,9 @@ Partial Class FPersonal
         Dim ApellidoLabel As System.Windows.Forms.Label
         Dim Id_PuestoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPersonal))
-        Me.ArandanosDataSet = New SisProduccion.arandanosDataSet()
-        Me.PersonalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonalTableAdapter = New SisProduccion.arandanosDataSetTableAdapters.PersonalTableAdapter()
-        Me.TableAdapterManager = New SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
+        Me.PersonalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ArandanosDataSet = New SisProduccion.arandanosDataSet()
         Me.Id_PersonalTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
@@ -45,16 +43,17 @@ Partial Class FPersonal
         Me.BCancelar = New System.Windows.Forms.Button()
         Me.BGuardar = New System.Windows.Forms.Button()
         Me.BEliminar = New System.Windows.Forms.Button()
-        Me.BSalir = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PersonalTableAdapter = New SisProduccion.arandanosDataSetTableAdapters.PersonalTableAdapter()
+        Me.TableAdapterManager = New SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         IdLabel = New System.Windows.Forms.Label()
         Id_PersonalLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
         Id_PuestoLabel = New System.Windows.Forms.Label()
-        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonalDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -109,29 +108,6 @@ Partial Class FPersonal
         Id_PuestoLabel.TabIndex = 9
         Id_PuestoLabel.Text = "Id Puesto:"
         '
-        'ArandanosDataSet
-        '
-        Me.ArandanosDataSet.DataSetName = "arandanosDataSet"
-        Me.ArandanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PersonalBindingSource
-        '
-        Me.PersonalBindingSource.DataMember = "Personal"
-        Me.PersonalBindingSource.DataSource = Me.ArandanosDataSet
-        '
-        'PersonalTableAdapter
-        '
-        Me.PersonalTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.PersonalTableAdapter = Me.PersonalTableAdapter
-        Me.TableAdapterManager.PuestoTableAdapter = Nothing
-        Me.TableAdapterManager.SectorTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
-        '
         'IdTextBox
         '
         Me.IdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -143,6 +119,16 @@ Partial Class FPersonal
         Me.IdTextBox.ReadOnly = True
         Me.IdTextBox.Size = New System.Drawing.Size(100, 40)
         Me.IdTextBox.TabIndex = 2
+        '
+        'PersonalBindingSource
+        '
+        Me.PersonalBindingSource.DataMember = "Personal"
+        Me.PersonalBindingSource.DataSource = Me.ArandanosDataSet
+        '
+        'ArandanosDataSet
+        '
+        Me.ArandanosDataSet.DataSetName = "arandanosDataSet"
+        Me.ArandanosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Id_PersonalTextBox
         '
@@ -177,6 +163,8 @@ Partial Class FPersonal
         '
         'Id_PuestoTextBox
         '
+        Me.Id_PuestoTextBox.AllowDrop = True
+        Me.Id_PuestoTextBox.AutoCompleteCustomSource.AddRange(New String() {"01", "02", "03", "04"})
         Me.Id_PuestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_PuestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "id_Puesto", True))
         Me.Id_PuestoTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
@@ -200,6 +188,7 @@ Partial Class FPersonal
         Me.PersonalDataGridView.ReadOnly = True
         Me.PersonalDataGridView.RowHeadersVisible = False
         Me.PersonalDataGridView.RowTemplate.Height = 24
+        Me.PersonalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.PersonalDataGridView.Size = New System.Drawing.Size(424, 280)
         Me.PersonalDataGridView.TabIndex = 11
         '
@@ -255,22 +244,32 @@ Partial Class FPersonal
         Me.BEliminar.Text = "Eliminar"
         Me.BEliminar.UseVisualStyleBackColor = True
         '
-        'BSalir
+        'Label1
         '
-        Me.BSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.BSalir.Image = CType(resources.GetObject("BSalir.Image"), System.Drawing.Image)
-        Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(455, 83)
-        Me.BSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BSalir.Name = "BSalir"
-        Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.BSalir.Size = New System.Drawing.Size(200, 75)
-        Me.BSalir.TabIndex = 17
-        Me.BSalir.Text = "Regresar"
-        Me.BSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BSalir.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(32, 175)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(329, 35)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "Administración de Personal"
+        '
+        'PersonalTableAdapter
+        '
+        Me.PersonalTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CosechaTableAdapter = Nothing
+        Me.TableAdapterManager.CubetasTableAdapter = Nothing
+        Me.TableAdapterManager.PersonalTableAdapter = Me.PersonalTableAdapter
+        Me.TableAdapterManager.ProduccionTableAdapter = Nothing
+        Me.TableAdapterManager.ProductorTableAdapter = Nothing
+        Me.TableAdapterManager.PuestoTableAdapter = Nothing
+        Me.TableAdapterManager.SectorTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'PictureBox2
         '
@@ -283,16 +282,6 @@ Partial Class FPersonal
         Me.PictureBox2.TabIndex = 18
         Me.PictureBox2.TabStop = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(32, 175)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(329, 35)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Administración de Personal"
-        '
         'FPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -300,7 +289,6 @@ Partial Class FPersonal
         Me.ClientSize = New System.Drawing.Size(982, 543)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.BSalir)
         Me.Controls.Add(Me.BEliminar)
         Me.Controls.Add(Me.BGuardar)
         Me.Controls.Add(Me.BCancelar)
@@ -319,8 +307,8 @@ Partial Class FPersonal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FPersonal"
         Me.Text = "Administración de Personal"
-        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonalDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -344,7 +332,6 @@ Partial Class FPersonal
     Friend WithEvents BCancelar As Button
     Friend WithEvents BGuardar As Button
     Friend WithEvents BEliminar As Button
-    Friend WithEvents BSalir As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
 End Class

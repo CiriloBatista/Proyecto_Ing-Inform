@@ -27,10 +27,6 @@
         Return True
     End Function
 
-    Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
-        Me.Close()
-        FMenuP.Show()
-    End Sub
 
     Private Sub BNuevo_Click(sender As Object, e As EventArgs) Handles BNuevo.Click
         PuestoBindingSource.AddNew() 'Se selecciona la tabla a la que haremos referencia y añadimos una nueva fila'
@@ -68,4 +64,5 @@
     Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click
         PuestoBindingSource.CancelEdit() 'Se selecciona la tabla a la que haremos referencia y ponemos para cancelar'
     End Sub
+
 End Class

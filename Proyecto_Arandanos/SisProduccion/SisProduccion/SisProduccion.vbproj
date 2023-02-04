@@ -96,6 +96,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>arandanosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FCosecha.Designer.vb">
+      <DependentUpon>FCosecha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCosecha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCubetas.Designer.vb">
+      <DependentUpon>FCubetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FCubetas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FMenuP.Designer.vb">
       <DependentUpon>FMenuP.vb</DependentUpon>
     </Compile>
@@ -126,6 +138,12 @@
     <Compile Include="FPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FSector.Designer.vb">
+      <DependentUpon>FSector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSector.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FUser.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,7 @@
       <DependentUpon>FUser.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MControl.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -150,6 +169,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FCosecha.resx">
+      <DependentUpon>FCosecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCubetas.resx">
+      <DependentUpon>FCubetas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMenuP.resx">
       <DependentUpon>FMenuP.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPersonal.resx">
       <DependentUpon>FPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSector.resx">
+      <DependentUpon>FSector.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FUser.resx">
       <DependentUpon>FUser.vb</DependentUpon>
@@ -219,6 +247,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\roquin.png" />
     <Content Include="roquin_Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
