@@ -96,6 +96,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>arandanosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="arandanosDataSet.vb">
+      <DependentUpon>arandanosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FCosecha.Designer.vb">
       <DependentUpon>FCosecha.vb</DependentUpon>
     </Compile>
@@ -124,6 +127,12 @@
       <DependentUpon>FormLoginPractica.vb</DependentUpon>
     </Compile>
     <Compile Include="FormLoginPractica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FProductor.Designer.vb">
+      <DependentUpon>FProductor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FProductor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FPuesto.Designer.vb">
@@ -183,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoginPractica.resx">
       <DependentUpon>FormLoginPractica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProductor.resx">
+      <DependentUpon>FProductor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FPuesto.resx">
       <DependentUpon>FPuesto.vb</DependentUpon>

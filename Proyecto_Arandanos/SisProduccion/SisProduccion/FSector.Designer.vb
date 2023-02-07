@@ -41,19 +41,21 @@ Partial Class FSector
         Me.BGuardar = New System.Windows.Forms.Button()
         Me.BCancelar = New System.Windows.Forms.Button()
         Me.BNuevo = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Id_SectorLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SectorBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SectorDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Id_SectorLabel
         '
         Id_SectorLabel.AutoSize = True
         Id_SectorLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Id_SectorLabel.Location = New System.Drawing.Point(44, 262)
+        Id_SectorLabel.Location = New System.Drawing.Point(66, 270)
         Id_SectorLabel.Name = "Id_SectorLabel"
         Id_SectorLabel.Size = New System.Drawing.Size(140, 35)
         Id_SectorLabel.TabIndex = 1
@@ -63,7 +65,7 @@ Partial Class FSector
         '
         NombreLabel.AutoSize = True
         NombreLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        NombreLabel.Location = New System.Drawing.Point(68, 317)
+        NombreLabel.Location = New System.Drawing.Point(90, 325)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(116, 35)
         NombreLabel.TabIndex = 3
@@ -101,17 +103,19 @@ Partial Class FSector
         Me.SectorDataGridView.AllowUserToAddRows = False
         Me.SectorDataGridView.AllowUserToDeleteRows = False
         Me.SectorDataGridView.AutoGenerateColumns = False
+        Me.SectorDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.SectorDataGridView.BackgroundColor = System.Drawing.Color.LightGreen
         Me.SectorDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.SectorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SectorDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.SectorDataGridView.DataSource = Me.SectorBindingSource
-        Me.SectorDataGridView.Location = New System.Drawing.Point(417, 134)
+        Me.SectorDataGridView.Location = New System.Drawing.Point(477, 179)
         Me.SectorDataGridView.Name = "SectorDataGridView"
         Me.SectorDataGridView.ReadOnly = True
         Me.SectorDataGridView.RowHeadersVisible = False
         Me.SectorDataGridView.RowTemplate.Height = 24
         Me.SectorDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.SectorDataGridView.Size = New System.Drawing.Size(300, 220)
+        Me.SectorDataGridView.Size = New System.Drawing.Size(500, 360)
         Me.SectorDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -133,7 +137,7 @@ Partial Class FSector
         Me.Id_SectorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_SectorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SectorBindingSource, "Id_Sector", True))
         Me.Id_SectorTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Id_SectorTextBox.Location = New System.Drawing.Point(194, 257)
+        Me.Id_SectorTextBox.Location = New System.Drawing.Point(216, 265)
         Me.Id_SectorTextBox.Name = "Id_SectorTextBox"
         Me.Id_SectorTextBox.Size = New System.Drawing.Size(100, 40)
         Me.Id_SectorTextBox.TabIndex = 2
@@ -143,7 +147,7 @@ Partial Class FSector
         Me.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SectorBindingSource, "nombre", True))
         Me.NombreTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.NombreTextBox.Location = New System.Drawing.Point(194, 314)
+        Me.NombreTextBox.Location = New System.Drawing.Point(216, 322)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(150, 40)
         Me.NombreTextBox.TabIndex = 4
@@ -151,10 +155,10 @@ Partial Class FSector
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(48, 192)
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(351, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(261, 35)
+        Me.Label1.Size = New System.Drawing.Size(371, 48)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Registro de Sectores"
         '
@@ -171,7 +175,7 @@ Partial Class FSector
         '
         'BEliminar
         '
-        Me.BEliminar.Location = New System.Drawing.Point(132, 386)
+        Me.BEliminar.Location = New System.Drawing.Point(130, 444)
         Me.BEliminar.Name = "BEliminar"
         Me.BEliminar.Size = New System.Drawing.Size(99, 40)
         Me.BEliminar.TabIndex = 35
@@ -180,7 +184,7 @@ Partial Class FSector
         '
         'BGuardar
         '
-        Me.BGuardar.Location = New System.Drawing.Point(245, 386)
+        Me.BGuardar.Location = New System.Drawing.Point(243, 444)
         Me.BGuardar.Name = "BGuardar"
         Me.BGuardar.Size = New System.Drawing.Size(99, 40)
         Me.BGuardar.TabIndex = 34
@@ -189,7 +193,7 @@ Partial Class FSector
         '
         'BCancelar
         '
-        Me.BCancelar.Location = New System.Drawing.Point(361, 386)
+        Me.BCancelar.Location = New System.Drawing.Point(359, 444)
         Me.BCancelar.Name = "BCancelar"
         Me.BCancelar.Size = New System.Drawing.Size(99, 40)
         Me.BCancelar.TabIndex = 33
@@ -198,29 +202,40 @@ Partial Class FSector
         '
         'BNuevo
         '
-        Me.BNuevo.Location = New System.Drawing.Point(21, 386)
+        Me.BNuevo.Location = New System.Drawing.Point(19, 444)
         Me.BNuevo.Name = "BNuevo"
         Me.BNuevo.Size = New System.Drawing.Size(99, 40)
         Me.BNuevo.TabIndex = 32
         Me.BNuevo.Text = "Nuevo"
         Me.BNuevo.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.LightGreen
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(989, 173)
+        Me.Panel1.TabIndex = 36
+        '
         'FSector
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 472)
+        Me.ClientSize = New System.Drawing.Size(982, 543)
         Me.Controls.Add(Me.BEliminar)
         Me.Controls.Add(Me.BGuardar)
         Me.Controls.Add(Me.BCancelar)
         Me.Controls.Add(Me.BNuevo)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Id_SectorLabel)
         Me.Controls.Add(Me.Id_SectorTextBox)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextBox)
         Me.Controls.Add(Me.SectorDataGridView)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FSector"
         Me.Text = "Sectores"
@@ -228,6 +243,8 @@ Partial Class FSector
         CType(Me.SectorBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SectorDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -248,4 +265,5 @@ Partial Class FSector
     Friend WithEvents BGuardar As Button
     Friend WithEvents BCancelar As Button
     Friend WithEvents BNuevo As Button
+    Friend WithEvents Panel1 As Panel
 End Class

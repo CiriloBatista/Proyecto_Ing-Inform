@@ -30,9 +30,6 @@ Partial Class FCosecha
         Dim FechaLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FCosecha))
         Me.CosechaDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CosechaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ArandanosDataSet = New SisProduccion.arandanosDataSet()
         Me.BEliminar = New System.Windows.Forms.Button()
@@ -48,6 +45,11 @@ Partial Class FCosecha
         Me.TableAdapterManager = New SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.FechaDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Id_PersonalLabel = New System.Windows.Forms.Label()
         Total_cubetasLabel = New System.Windows.Forms.Label()
         Total_kilosLabel = New System.Windows.Forms.Label()
@@ -63,7 +65,7 @@ Partial Class FCosecha
         '
         Id_PersonalLabel.AutoSize = True
         Id_PersonalLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Id_PersonalLabel.Location = New System.Drawing.Point(88, 379)
+        Id_PersonalLabel.Location = New System.Drawing.Point(77, 308)
         Id_PersonalLabel.Name = "Id_PersonalLabel"
         Id_PersonalLabel.Size = New System.Drawing.Size(158, 35)
         Id_PersonalLabel.TabIndex = 23
@@ -73,7 +75,7 @@ Partial Class FCosecha
         '
         Total_cubetasLabel.AutoSize = True
         Total_cubetasLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Total_cubetasLabel.Location = New System.Drawing.Point(28, 433)
+        Total_cubetasLabel.Location = New System.Drawing.Point(17, 356)
         Total_cubetasLabel.Name = "Total_cubetasLabel"
         Total_cubetasLabel.Size = New System.Drawing.Size(223, 35)
         Total_cubetasLabel.TabIndex = 25
@@ -83,7 +85,7 @@ Partial Class FCosecha
         '
         Total_kilosLabel.AutoSize = True
         Total_kilosLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Total_kilosLabel.Location = New System.Drawing.Point(62, 489)
+        Total_kilosLabel.Location = New System.Drawing.Point(51, 406)
         Total_kilosLabel.Name = "Total_kilosLabel"
         Total_kilosLabel.Size = New System.Drawing.Size(186, 35)
         Total_kilosLabel.TabIndex = 27
@@ -93,7 +95,7 @@ Partial Class FCosecha
         '
         Id_cosechaLabel.AutoSize = True
         Id_cosechaLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Id_cosechaLabel.Location = New System.Drawing.Point(95, 256)
+        Id_cosechaLabel.Location = New System.Drawing.Point(84, 206)
         Id_cosechaLabel.Name = "Id_cosechaLabel"
         Id_cosechaLabel.Size = New System.Drawing.Size(151, 35)
         Id_cosechaLabel.TabIndex = 30
@@ -103,7 +105,7 @@ Partial Class FCosecha
         '
         FechaLabel.AutoSize = True
         FechaLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        FechaLabel.Location = New System.Drawing.Point(157, 318)
+        FechaLabel.Location = New System.Drawing.Point(146, 258)
         FechaLabel.Name = "FechaLabel"
         FechaLabel.Size = New System.Drawing.Size(92, 35)
         FechaLabel.TabIndex = 31
@@ -115,39 +117,20 @@ Partial Class FCosecha
         Me.CosechaDataGridView.AllowUserToAddRows = False
         Me.CosechaDataGridView.AllowUserToDeleteRows = False
         Me.CosechaDataGridView.AutoGenerateColumns = False
+        Me.CosechaDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.CosechaDataGridView.BackgroundColor = System.Drawing.Color.LightGreen
         Me.CosechaDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.CosechaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CosechaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.CosechaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.fecha, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.CosechaDataGridView.DataSource = Me.CosechaBindingSource
-        Me.CosechaDataGridView.Location = New System.Drawing.Point(492, 114)
+        Me.CosechaDataGridView.Location = New System.Drawing.Point(475, 178)
         Me.CosechaDataGridView.Name = "CosechaDataGridView"
         Me.CosechaDataGridView.ReadOnly = True
         Me.CosechaDataGridView.RowHeadersVisible = False
         Me.CosechaDataGridView.RowTemplate.Height = 24
         Me.CosechaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.CosechaDataGridView.Size = New System.Drawing.Size(335, 288)
+        Me.CosechaDataGridView.Size = New System.Drawing.Size(500, 360)
         Me.CosechaDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "id_Personal"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "id_Personal"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "total_cubetas"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "total_cubetas"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "total_kilos"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "total_kilos"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'CosechaBindingSource
         '
@@ -161,7 +144,7 @@ Partial Class FCosecha
         '
         'BEliminar
         '
-        Me.BEliminar.Location = New System.Drawing.Point(615, 430)
+        Me.BEliminar.Location = New System.Drawing.Point(241, 471)
         Me.BEliminar.Name = "BEliminar"
         Me.BEliminar.Size = New System.Drawing.Size(99, 40)
         Me.BEliminar.TabIndex = 19
@@ -170,7 +153,7 @@ Partial Class FCosecha
         '
         'BGuardar
         '
-        Me.BGuardar.Location = New System.Drawing.Point(499, 484)
+        Me.BGuardar.Location = New System.Drawing.Point(136, 471)
         Me.BGuardar.Name = "BGuardar"
         Me.BGuardar.Size = New System.Drawing.Size(99, 40)
         Me.BGuardar.TabIndex = 18
@@ -179,7 +162,7 @@ Partial Class FCosecha
         '
         'BCancelar
         '
-        Me.BCancelar.Location = New System.Drawing.Point(615, 484)
+        Me.BCancelar.Location = New System.Drawing.Point(346, 471)
         Me.BCancelar.Name = "BCancelar"
         Me.BCancelar.Size = New System.Drawing.Size(99, 40)
         Me.BCancelar.TabIndex = 17
@@ -188,7 +171,7 @@ Partial Class FCosecha
         '
         'BNuevo
         '
-        Me.BNuevo.Location = New System.Drawing.Point(499, 430)
+        Me.BNuevo.Location = New System.Drawing.Point(31, 471)
         Me.BNuevo.Name = "BNuevo"
         Me.BNuevo.Size = New System.Drawing.Size(99, 40)
         Me.BNuevo.TabIndex = 16
@@ -200,7 +183,7 @@ Partial Class FCosecha
         Me.Id_PersonalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_PersonalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CosechaBindingSource, "id_Personal", True))
         Me.Id_PersonalTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Id_PersonalTextBox.Location = New System.Drawing.Point(268, 374)
+        Me.Id_PersonalTextBox.Location = New System.Drawing.Point(257, 303)
         Me.Id_PersonalTextBox.Name = "Id_PersonalTextBox"
         Me.Id_PersonalTextBox.Size = New System.Drawing.Size(139, 40)
         Me.Id_PersonalTextBox.TabIndex = 24
@@ -210,7 +193,7 @@ Partial Class FCosecha
         Me.Total_cubetasTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Total_cubetasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CosechaBindingSource, "total_cubetas", True))
         Me.Total_cubetasTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Total_cubetasTextBox.Location = New System.Drawing.Point(268, 430)
+        Me.Total_cubetasTextBox.Location = New System.Drawing.Point(257, 353)
         Me.Total_cubetasTextBox.Name = "Total_cubetasTextBox"
         Me.Total_cubetasTextBox.Size = New System.Drawing.Size(139, 40)
         Me.Total_cubetasTextBox.TabIndex = 26
@@ -220,7 +203,7 @@ Partial Class FCosecha
         Me.Total_kilosTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Total_kilosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CosechaBindingSource, "total_kilos", True))
         Me.Total_kilosTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Total_kilosTextBox.Location = New System.Drawing.Point(268, 487)
+        Me.Total_kilosTextBox.Location = New System.Drawing.Point(257, 404)
         Me.Total_kilosTextBox.Name = "Total_kilosTextBox"
         Me.Total_kilosTextBox.Size = New System.Drawing.Size(139, 40)
         Me.Total_kilosTextBox.TabIndex = 28
@@ -228,19 +211,20 @@ Partial Class FCosecha
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(77, 192)
+        Me.Label1.BackColor = System.Drawing.Color.LightGreen
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(350, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(250, 35)
+        Me.Label1.Size = New System.Drawing.Size(315, 48)
         Me.Label1.TabIndex = 29
-        Me.Label1.Text = "Registro de Cosecha"
+        Me.Label1.Text = "Registrar cosecha"
         '
         'Id_cosechaTextBox
         '
         Me.Id_cosechaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_cosechaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CosechaBindingSource, "Id_cosecha", True))
         Me.Id_cosechaTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Id_cosechaTextBox.Location = New System.Drawing.Point(268, 254)
+        Me.Id_cosechaTextBox.Location = New System.Drawing.Point(257, 204)
         Me.Id_cosechaTextBox.Name = "Id_cosechaTextBox"
         Me.Id_cosechaTextBox.ReadOnly = True
         Me.Id_cosechaTextBox.Size = New System.Drawing.Size(100, 40)
@@ -279,16 +263,55 @@ Partial Class FCosecha
         Me.FechaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.CosechaBindingSource, "fecha", True))
         Me.FechaDateTimePicker.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
         Me.FechaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FechaDateTimePicker.Location = New System.Drawing.Point(268, 313)
+        Me.FechaDateTimePicker.Location = New System.Drawing.Point(257, 253)
         Me.FechaDateTimePicker.Name = "FechaDateTimePicker"
-        Me.FechaDateTimePicker.Size = New System.Drawing.Size(200, 40)
+        Me.FechaDateTimePicker.Size = New System.Drawing.Size(167, 40)
         Me.FechaDateTimePicker.TabIndex = 32
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.LightGreen
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(989, 173)
+        Me.Panel1.TabIndex = 33
+        '
+        'fecha
+        '
+        Me.fecha.DataPropertyName = "fecha"
+        Me.fecha.HeaderText = "Fecha"
+        Me.fecha.Name = "fecha"
+        Me.fecha.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "id_Personal"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Id Personal"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "total_cubetas"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Total de Cubetas"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "total_kilos"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Total de Kilos"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'FCosecha
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(907, 607)
+        Me.BackColor = System.Drawing.Color.MintCream
+        Me.ClientSize = New System.Drawing.Size(982, 543)
         Me.Controls.Add(FechaLabel)
         Me.Controls.Add(Me.FechaDateTimePicker)
         Me.Controls.Add(Id_cosechaLabel)
@@ -306,6 +329,7 @@ Partial Class FCosecha
         Me.Controls.Add(Me.BCancelar)
         Me.Controls.Add(Me.BNuevo)
         Me.Controls.Add(Me.CosechaDataGridView)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FCosecha"
         Me.Text = "Registro de Cosecha"
@@ -323,9 +347,6 @@ Partial Class FCosecha
     Friend WithEvents CosechaTableAdapter As arandanosDataSetTableAdapters.CosechaTableAdapter
     Friend WithEvents TableAdapterManager As arandanosDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CosechaDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents BEliminar As Button
     Friend WithEvents BGuardar As Button
     Friend WithEvents BCancelar As Button
@@ -337,4 +358,9 @@ Partial Class FCosecha
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Id_cosechaTextBox As TextBox
     Friend WithEvents FechaDateTimePicker As DateTimePicker
+    Friend WithEvents fecha As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As Panel
 End Class

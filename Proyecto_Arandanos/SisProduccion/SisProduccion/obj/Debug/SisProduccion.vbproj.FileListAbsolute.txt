@@ -18,3 +18,4 @@ C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FormLo
 C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FCubetas.resources
 C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FCosecha.resources
 C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FSector.resources
+C:\Proyecto_Arandanos\SisProduccion\SisProduccion\obj\Debug\SisProduccion.FProductor.resources

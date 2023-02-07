@@ -138,6 +138,9 @@
   <metadata name="ArandanosDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="ArandanosDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="UsuariosTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>414, 17</value>
   </metadata>
@@ -145,20 +148,6 @@
     <value>621, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAArQNAAK0DQEdFIm+AAAAB3RJ
-        TUUH5gsXAhICI6nJmQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFmSURBVGhD
-        7Zq7SgNRFEVHRHyUgtpa6kcEQbBQS0HBRv/A/1Dwn4yFhVWKoKKFhbUWIlY+1tZcELsx5xzJyd2wmMw0
-        exbJ3Jm5N01NTc1QWYAd2A1gDzZhBszTgWd4hzdnPqAPS2AeibyASiK4AncRbS+ga8gZ9KB8IyEiN7AM
-        szBnxDRsQOkIEVHJIljnd0eIiEdJFWmTaJFrSCFyCfNgniiRV3iAbR3wSITIGmhod5NQIkRWYP37o18i
-        RCYGW2UKVmHya88wESIlOvkjuIdDHbBMpMgBlK7Hwb5ZIkV00d+BusxlIkUUydyCuUy0iKJO3eFNZdqI
-        aLQ5htMhOYFzKCImMm1EtqC8IHnwBPvwp4ylSJqfllXU+a8Xu0VSDL9pbog66dJlKqFEiqR5aFRG+jE+
-        zYtVmldddaSYfPjZMfLTQaUjzQSdV0dekRTLCmkWerRNsfQWgatIiuXpNH8YqKkZ7zTNJwOzvm2ddqxD
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA5wAAAJCCAYAAACs8cg6AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
@@ -2715,6 +2704,9 @@
         IaRlGtn/B6LYvzi6hmz7AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="nivel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="nivel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

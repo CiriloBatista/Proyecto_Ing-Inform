@@ -50,148 +50,181 @@ Partial Class FMenuP
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.LightGreen
+        Me.MenuStrip1.BackgroundImage = Global.SisProduccion.My.Resources.Resources.roquin
         Me.MenuStrip1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Bold)
         Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(4, 4, 0, 4)
         Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 30)
+        Me.MenuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CatalogoToolStripMenuItem, Me.OperaciónToolStripMenuItem, Me.UtileríasToolStripMenuItem, Me.InformesToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.MaximumSize = New System.Drawing.Size(2400, 150)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(10, 20, 0, 20)
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 74)
+        Me.MenuStrip1.Size = New System.Drawing.Size(982, 82)
         Me.MenuStrip1.TabIndex = 18
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'CatalogoToolStripMenuItem
         '
+        Me.CatalogoToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.CatalogoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PersonalToolStripMenuItem, Me.SectorToolStripMenuItem, Me.PuestoToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.CubetasToolStripMenuItem, Me.CosechaToolStripMenuItem, Me.UsuariosToolStripMenuItem})
+        Me.CatalogoToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 16.0!, System.Drawing.FontStyle.Bold)
         Me.CatalogoToolStripMenuItem.Name = "CatalogoToolStripMenuItem"
-        Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(106, 34)
+        Me.CatalogoToolStripMenuItem.Size = New System.Drawing.Size(138, 42)
         Me.CatalogoToolStripMenuItem.Text = "&Catálogo"
         '
         'PersonalToolStripMenuItem
         '
+        Me.PersonalToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'SectorToolStripMenuItem
         '
+        Me.SectorToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.SectorToolStripMenuItem.Name = "SectorToolStripMenuItem"
-        Me.SectorToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.SectorToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.SectorToolStripMenuItem.Text = "Sector"
         '
         'PuestoToolStripMenuItem
         '
+        Me.PuestoToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.PuestoToolStripMenuItem.Name = "PuestoToolStripMenuItem"
-        Me.PuestoToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.PuestoToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.PuestoToolStripMenuItem.Text = "Puesto"
         '
         'ProductosToolStripMenuItem
         '
+        Me.ProductosToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.ProductosToolStripMenuItem.Text = "Producción"
         '
         'CubetasToolStripMenuItem
         '
+        Me.CubetasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.CubetasToolStripMenuItem.Name = "CubetasToolStripMenuItem"
-        Me.CubetasToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.CubetasToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.CubetasToolStripMenuItem.Text = "Cubetas"
         '
         'CosechaToolStripMenuItem
         '
+        Me.CosechaToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.CosechaToolStripMenuItem.Name = "CosechaToolStripMenuItem"
-        Me.CosechaToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.CosechaToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.CosechaToolStripMenuItem.Text = "Cosecha"
         '
         'UsuariosToolStripMenuItem
         '
+        Me.UsuariosToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(216, 34)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'OperaciónToolStripMenuItem
         '
+        Me.OperaciónToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.OperaciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EntradasToolStripMenuItem, Me.SalidasToolStripMenuItem, Me.InventarioToolStripMenuItem})
+        Me.OperaciónToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 16.0!, System.Drawing.FontStyle.Bold)
         Me.OperaciónToolStripMenuItem.Name = "OperaciónToolStripMenuItem"
-        Me.OperaciónToolStripMenuItem.Size = New System.Drawing.Size(121, 34)
+        Me.OperaciónToolStripMenuItem.Size = New System.Drawing.Size(158, 42)
         Me.OperaciónToolStripMenuItem.Text = "&Operación"
         '
         'EntradasToolStripMenuItem
         '
+        Me.EntradasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.EntradasToolStripMenuItem.Name = "EntradasToolStripMenuItem"
-        Me.EntradasToolStripMenuItem.Size = New System.Drawing.Size(191, 34)
+        Me.EntradasToolStripMenuItem.Size = New System.Drawing.Size(234, 42)
         Me.EntradasToolStripMenuItem.Text = "Entradas"
         '
         'SalidasToolStripMenuItem
         '
+        Me.SalidasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.SalidasToolStripMenuItem.Name = "SalidasToolStripMenuItem"
-        Me.SalidasToolStripMenuItem.Size = New System.Drawing.Size(191, 34)
+        Me.SalidasToolStripMenuItem.Size = New System.Drawing.Size(234, 42)
         Me.SalidasToolStripMenuItem.Text = "Salidas"
         '
         'InventarioToolStripMenuItem
         '
+        Me.InventarioToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.InventarioToolStripMenuItem.Name = "InventarioToolStripMenuItem"
-        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(191, 34)
+        Me.InventarioToolStripMenuItem.Size = New System.Drawing.Size(234, 42)
         Me.InventarioToolStripMenuItem.Text = "Inventario"
         '
         'UtileríasToolStripMenuItem
         '
+        Me.UtileríasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.UtileríasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExportarToolStripMenuItem, Me.CapturasToolStripMenuItem})
+        Me.UtileríasToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 16.0!, System.Drawing.FontStyle.Bold)
         Me.UtileríasToolStripMenuItem.Name = "UtileríasToolStripMenuItem"
-        Me.UtileríasToolStripMenuItem.Size = New System.Drawing.Size(108, 34)
+        Me.UtileríasToolStripMenuItem.Size = New System.Drawing.Size(141, 42)
         Me.UtileríasToolStripMenuItem.Text = "&Utilerías"
         '
         'ExportarToolStripMenuItem
         '
+        Me.ExportarToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.ExportarToolStripMenuItem.Name = "ExportarToolStripMenuItem"
-        Me.ExportarToolStripMenuItem.Size = New System.Drawing.Size(178, 34)
+        Me.ExportarToolStripMenuItem.Size = New System.Drawing.Size(215, 42)
         Me.ExportarToolStripMenuItem.Text = "Exportar"
         '
         'CapturasToolStripMenuItem
         '
+        Me.CapturasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.CapturasToolStripMenuItem.Name = "CapturasToolStripMenuItem"
-        Me.CapturasToolStripMenuItem.Size = New System.Drawing.Size(178, 34)
+        Me.CapturasToolStripMenuItem.Size = New System.Drawing.Size(215, 42)
         Me.CapturasToolStripMenuItem.Text = "Capturas"
         '
         'InformesToolStripMenuItem
         '
+        Me.InformesToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.InformesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.VentasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.ProducciónToolStripMenuItem})
+        Me.InformesToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 16.0!, System.Drawing.FontStyle.Bold)
         Me.InformesToolStripMenuItem.Name = "InformesToolStripMenuItem"
-        Me.InformesToolStripMenuItem.Size = New System.Drawing.Size(114, 34)
+        Me.InformesToolStripMenuItem.Size = New System.Drawing.Size(148, 42)
         Me.InformesToolStripMenuItem.Text = "I&nformes"
         '
         'ClientesToolStripMenuItem
         '
+        Me.ClientesToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(193, 34)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'VentasToolStripMenuItem
         '
+        Me.VentasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(193, 34)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'ComprasToolStripMenuItem
         '
+        Me.ComprasToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(193, 34)
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.ComprasToolStripMenuItem.Text = "Compras"
         '
         'ProducciónToolStripMenuItem
         '
+        Me.ProducciónToolStripMenuItem.BackColor = System.Drawing.Color.LightGreen
         Me.ProducciónToolStripMenuItem.Name = "ProducciónToolStripMenuItem"
-        Me.ProducciónToolStripMenuItem.Size = New System.Drawing.Size(193, 34)
+        Me.ProducciónToolStripMenuItem.Size = New System.Drawing.Size(235, 42)
         Me.ProducciónToolStripMenuItem.Text = "Producción"
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.SalirToolStripMenuItem.BackColor = System.Drawing.Color.LightCoral
+        Me.SalirToolStripMenuItem.Font = New System.Drawing.Font("Comic Sans MS", 16.0!, System.Drawing.FontStyle.Bold)
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SalirToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.SalirToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 0, 50, 0)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(91, 34)
+        Me.SalirToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(111, 42)
         Me.SalirToolStripMenuItem.Text = "Salir"
         Me.SalirToolStripMenuItem.ToolTipText = "Salir del menu"
         '
@@ -199,10 +232,10 @@ Partial Class FMenuP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.BackgroundImage = Global.SisProduccion.My.Resources.Resources.roquin
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(982, 543)
         Me.Controls.Add(Me.MenuStrip1)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -210,6 +243,7 @@ Partial Class FMenuP
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FMenuP"
         Me.Text = "Menú Principal"
+        Me.TransparencyKey = System.Drawing.Color.LightGreen
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

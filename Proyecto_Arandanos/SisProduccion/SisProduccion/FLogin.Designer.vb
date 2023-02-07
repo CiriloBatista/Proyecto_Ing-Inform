@@ -58,7 +58,7 @@ Partial Class FLogin
         'UsuarioLabel
         '
         UsuarioLabel.AutoSize = True
-        UsuarioLabel.Location = New System.Drawing.Point(203, 79)
+        UsuarioLabel.Location = New System.Drawing.Point(205, 118)
         UsuarioLabel.Name = "UsuarioLabel"
         UsuarioLabel.Size = New System.Drawing.Size(59, 17)
         UsuarioLabel.TabIndex = 15
@@ -67,7 +67,7 @@ Partial Class FLogin
         'ContraseñaLabel
         '
         ContraseñaLabel.AutoSize = True
-        ContraseñaLabel.Location = New System.Drawing.Point(179, 109)
+        ContraseñaLabel.Location = New System.Drawing.Point(181, 148)
         ContraseñaLabel.Name = "ContraseñaLabel"
         ContraseñaLabel.Size = New System.Drawing.Size(83, 17)
         ContraseñaLabel.TabIndex = 16
@@ -76,7 +76,7 @@ Partial Class FLogin
         'Id_UsuariosLabel
         '
         Id_UsuariosLabel.AutoSize = True
-        Id_UsuariosLabel.Location = New System.Drawing.Point(179, 51)
+        Id_UsuariosLabel.Location = New System.Drawing.Point(181, 74)
         Id_UsuariosLabel.Name = "Id_UsuariosLabel"
         Id_UsuariosLabel.Size = New System.Drawing.Size(83, 17)
         Id_UsuariosLabel.TabIndex = 17
@@ -85,7 +85,7 @@ Partial Class FLogin
         'NivelLabel
         '
         NivelLabel.AutoSize = True
-        NivelLabel.Location = New System.Drawing.Point(221, 135)
+        NivelLabel.Location = New System.Drawing.Point(223, 174)
         NivelLabel.Name = "NivelLabel"
         NivelLabel.Size = New System.Drawing.Size(41, 17)
         NivelLabel.TabIndex = 18
@@ -104,10 +104,10 @@ Partial Class FLogin
         'LUsuario
         '
         Me.LUsuario.AutoSize = True
-        Me.LUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.LUsuario.Location = New System.Drawing.Point(171, 221)
+        Me.LUsuario.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.LUsuario.Location = New System.Drawing.Point(164, 260)
         Me.LUsuario.Name = "LUsuario"
-        Me.LUsuario.Size = New System.Drawing.Size(85, 25)
+        Me.LUsuario.Size = New System.Drawing.Size(112, 35)
         Me.LUsuario.TabIndex = 10
         Me.LUsuario.Text = "Usuario:"
         '
@@ -115,28 +115,28 @@ Partial Class FLogin
         '
         Me.usuario_textBox.BackColor = System.Drawing.Color.White
         Me.usuario_textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.usuario_textBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.usuario_textBox.Location = New System.Drawing.Point(285, 216)
+        Me.usuario_textBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.usuario_textBox.Location = New System.Drawing.Point(287, 255)
         Me.usuario_textBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.usuario_textBox.MaximumSize = New System.Drawing.Size(130, 50)
         Me.usuario_textBox.MaxLength = 20
         Me.usuario_textBox.MinimumSize = New System.Drawing.Size(100, 30)
         Me.usuario_textBox.Name = "usuario_textBox"
-        Me.usuario_textBox.Size = New System.Drawing.Size(130, 30)
+        Me.usuario_textBox.Size = New System.Drawing.Size(130, 40)
         Me.usuario_textBox.TabIndex = 8
         '
         'Btn_Ingresar
         '
-        Me.Btn_Ingresar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Btn_Ingresar.BackColor = System.Drawing.Color.PaleGreen
         Me.Btn_Ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Ingresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.Btn_Ingresar.Image = CType(resources.GetObject("Btn_Ingresar.Image"), System.Drawing.Image)
         Me.Btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Btn_Ingresar.Location = New System.Drawing.Point(97, 328)
+        Me.Btn_Ingresar.Location = New System.Drawing.Point(76, 366)
         Me.Btn_Ingresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Ingresar.Name = "Btn_Ingresar"
         Me.Btn_Ingresar.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.Btn_Ingresar.Size = New System.Drawing.Size(204, 76)
+        Me.Btn_Ingresar.Size = New System.Drawing.Size(200, 75)
         Me.Btn_Ingresar.TabIndex = 12
         Me.Btn_Ingresar.Text = "Ingresar"
         Me.Btn_Ingresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -144,8 +144,9 @@ Partial Class FLogin
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.MintCream
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(141, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(143, 50)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(294, 173)
@@ -156,39 +157,39 @@ Partial Class FLogin
         'password
         '
         Me.password.AutoSize = True
-        Me.password.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.password.Location = New System.Drawing.Point(136, 265)
+        Me.password.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.password.Location = New System.Drawing.Point(123, 308)
         Me.password.Name = "password"
-        Me.password.Size = New System.Drawing.Size(120, 25)
+        Me.password.Size = New System.Drawing.Size(153, 35)
         Me.password.TabIndex = 14
         Me.password.Text = "Contraseña:"
         '
         'passwordTextBox
         '
         Me.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.passwordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.passwordTextBox.Location = New System.Drawing.Point(285, 262)
+        Me.passwordTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.passwordTextBox.Location = New System.Drawing.Point(287, 305)
         Me.passwordTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.passwordTextBox.MaximumSize = New System.Drawing.Size(130, 50)
         Me.passwordTextBox.MaxLength = 8
         Me.passwordTextBox.MinimumSize = New System.Drawing.Size(100, 30)
         Me.passwordTextBox.Name = "passwordTextBox"
         Me.passwordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.passwordTextBox.Size = New System.Drawing.Size(130, 30)
+        Me.passwordTextBox.Size = New System.Drawing.Size(130, 40)
         Me.passwordTextBox.TabIndex = 9
         '
         'BSalir
         '
-        Me.BSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BSalir.BackColor = System.Drawing.Color.LightCoral
         Me.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.BSalir.Image = CType(resources.GetObject("BSalir.Image"), System.Drawing.Image)
         Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(321, 328)
+        Me.BSalir.Location = New System.Drawing.Point(300, 366)
         Me.BSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BSalir.Name = "BSalir"
-        Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.BSalir.Size = New System.Drawing.Size(151, 76)
+        Me.BSalir.Padding = New System.Windows.Forms.Padding(30, 0, 30, 0)
+        Me.BSalir.Size = New System.Drawing.Size(200, 75)
         Me.BSalir.TabIndex = 15
         Me.BSalir.Text = "Salir"
         Me.BSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -197,7 +198,7 @@ Partial Class FLogin
         'UsuarioTextBox
         '
         Me.UsuarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "usuario", True))
-        Me.UsuarioTextBox.Location = New System.Drawing.Point(268, 76)
+        Me.UsuarioTextBox.Location = New System.Drawing.Point(270, 115)
         Me.UsuarioTextBox.Name = "UsuarioTextBox"
         Me.UsuarioTextBox.Size = New System.Drawing.Size(100, 22)
         Me.UsuarioTextBox.TabIndex = 16
@@ -215,7 +216,7 @@ Partial Class FLogin
         'ContrasenaTextBox
         '
         Me.ContrasenaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "contraseña", True))
-        Me.ContrasenaTextBox.Location = New System.Drawing.Point(268, 104)
+        Me.ContrasenaTextBox.Location = New System.Drawing.Point(270, 143)
         Me.ContrasenaTextBox.Name = "ContrasenaTextBox"
         Me.ContrasenaTextBox.Size = New System.Drawing.Size(100, 22)
         Me.ContrasenaTextBox.TabIndex = 17
@@ -227,8 +228,11 @@ Partial Class FLogin
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CosechaTableAdapter = Nothing
         Me.TableAdapterManager.CubetasTableAdapter = Nothing
         Me.TableAdapterManager.PersonalTableAdapter = Nothing
+        Me.TableAdapterManager.ProduccionTableAdapter = Nothing
+        Me.TableAdapterManager.ProductorTableAdapter = Nothing
         Me.TableAdapterManager.PuestoTableAdapter = Nothing
         Me.TableAdapterManager.SectorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -237,7 +241,7 @@ Partial Class FLogin
         'Id_UsuariosTextBox
         '
         Me.Id_UsuariosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "id_Usuarios", True))
-        Me.Id_UsuariosTextBox.Location = New System.Drawing.Point(268, 48)
+        Me.Id_UsuariosTextBox.Location = New System.Drawing.Point(270, 71)
         Me.Id_UsuariosTextBox.Name = "Id_UsuariosTextBox"
         Me.Id_UsuariosTextBox.Size = New System.Drawing.Size(100, 22)
         Me.Id_UsuariosTextBox.TabIndex = 18
@@ -250,7 +254,7 @@ Partial Class FLogin
         '
         Me.NivelComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "nivel", True))
         Me.NivelComboBox.FormattingEnabled = True
-        Me.NivelComboBox.Location = New System.Drawing.Point(268, 132)
+        Me.NivelComboBox.Location = New System.Drawing.Point(270, 171)
         Me.NivelComboBox.Name = "NivelComboBox"
         Me.NivelComboBox.Size = New System.Drawing.Size(121, 24)
         Me.NivelComboBox.TabIndex = 19
@@ -259,8 +263,8 @@ Partial Class FLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(573, 450)
+        Me.BackColor = System.Drawing.Color.LightGreen
+        Me.ClientSize = New System.Drawing.Size(600, 500)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(NivelLabel)
         Me.Controls.Add(Me.NivelComboBox)
@@ -276,9 +280,12 @@ Partial Class FLogin
         Me.Controls.Add(Me.Btn_Ingresar)
         Me.Controls.Add(Me.LUsuario)
         Me.Controls.Add(Me.usuario_textBox)
+        Me.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FLogin"
-        Me.Text = "Iniciar Sesion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Iniciar Sesión"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()

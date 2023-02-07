@@ -62,6 +62,16 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:SisProduccion.arandanosDataSet.ProduccionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.ProductorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:SisProduccion.arandanosDataSet.PersonalRow">
 <summary>
 Represents strongly named DataRow class.
@@ -88,6 +98,16 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:SisProduccion.arandanosDataSet.CosechaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.ProduccionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.ProductorRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -122,6 +142,16 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:SisProduccion.arandanosDataSet.ProduccionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSet.ProductorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:SisProduccion.arandanosDataSetTableAdapters.PersonalTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -148,6 +178,16 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:SisProduccion.arandanosDataSetTableAdapters.CosechaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSetTableAdapters.ProduccionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SisProduccion.arandanosDataSetTableAdapters.ProductorTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

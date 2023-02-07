@@ -9,7 +9,19 @@
         Me.Validate()
         Me.PuestoBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ArandanosDataSet)
+    End Sub
 
+    Private Sub Block()
+        PuestoDataGridView.Enabled = False
+        BNuevo.Visible = False
+        BEliminar.Visible = False
+        Id_PuestoTextBox.Enabled = True
+    End Sub
+    Private Sub DesBlock()
+        PuestoDataGridView.Enabled = True
+        BNuevo.Visible = True
+        BEliminar.Visible = True
+        Id_PuestoTextBox.Enabled = False
     End Sub
 
     Private Sub Actualiza()

@@ -42,13 +42,13 @@ Partial Class FUser
         Me.BGuardar = New System.Windows.Forms.Button()
         Me.BEliminar = New System.Windows.Forms.Button()
         Me.Id_UsuariosTextBox = New System.Windows.Forms.TextBox()
-        Me.BSalir = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.UsuariosDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nivel = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BCancelar = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         UsuarioLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
@@ -58,6 +58,7 @@ Partial Class FUser
         CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'UsuarioLabel
@@ -65,7 +66,7 @@ Partial Class FUser
         UsuarioLabel.AutoSize = True
         UsuarioLabel.BackColor = System.Drawing.Color.Transparent
         UsuarioLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        UsuarioLabel.Location = New System.Drawing.Point(73, 283)
+        UsuarioLabel.Location = New System.Drawing.Point(103, 257)
         UsuarioLabel.Name = "UsuarioLabel"
         UsuarioLabel.Size = New System.Drawing.Size(112, 35)
         UsuarioLabel.TabIndex = 3
@@ -76,7 +77,7 @@ Partial Class FUser
         NombreLabel.AutoSize = True
         NombreLabel.BackColor = System.Drawing.Color.Transparent
         NombreLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        NombreLabel.Location = New System.Drawing.Point(67, 327)
+        NombreLabel.Location = New System.Drawing.Point(97, 301)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(116, 35)
         NombreLabel.TabIndex = 5
@@ -87,7 +88,7 @@ Partial Class FUser
         ContraseñaLabel.AutoSize = True
         ContraseñaLabel.BackColor = System.Drawing.Color.Transparent
         ContraseñaLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        ContraseñaLabel.Location = New System.Drawing.Point(26, 371)
+        ContraseñaLabel.Location = New System.Drawing.Point(56, 345)
         ContraseñaLabel.Name = "ContraseñaLabel"
         ContraseñaLabel.Size = New System.Drawing.Size(153, 35)
         ContraseñaLabel.TabIndex = 7
@@ -98,7 +99,7 @@ Partial Class FUser
         NivelLabel.AutoSize = True
         NivelLabel.BackColor = System.Drawing.Color.Transparent
         NivelLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        NivelLabel.Location = New System.Drawing.Point(53, 417)
+        NivelLabel.Location = New System.Drawing.Point(83, 391)
         NivelLabel.Name = "NivelLabel"
         NivelLabel.Size = New System.Drawing.Size(126, 35)
         NivelLabel.TabIndex = 9
@@ -108,7 +109,7 @@ Partial Class FUser
         '
         Id_UsuariosLabel.AutoSize = True
         Id_UsuariosLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Id_UsuariosLabel.Location = New System.Drawing.Point(30, 239)
+        Id_UsuariosLabel.Location = New System.Drawing.Point(60, 213)
         Id_UsuariosLabel.Name = "Id_UsuariosLabel"
         Id_UsuariosLabel.Size = New System.Drawing.Size(149, 35)
         Id_UsuariosLabel.TabIndex = 16
@@ -129,7 +130,7 @@ Partial Class FUser
         Me.UsuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.UsuarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "usuario", True))
         Me.UsuarioTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.UsuarioTextBox.Location = New System.Drawing.Point(191, 280)
+        Me.UsuarioTextBox.Location = New System.Drawing.Point(221, 254)
         Me.UsuarioTextBox.MaxLength = 20
         Me.UsuarioTextBox.Name = "UsuarioTextBox"
         Me.UsuarioTextBox.Size = New System.Drawing.Size(120, 38)
@@ -140,7 +141,7 @@ Partial Class FUser
         Me.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "nombre", True))
         Me.NombreTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(191, 327)
+        Me.NombreTextBox.Location = New System.Drawing.Point(221, 301)
         Me.NombreTextBox.MaxLength = 255
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(200, 38)
@@ -151,7 +152,7 @@ Partial Class FUser
         Me.ContraseñaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ContraseñaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "contraseña", True))
         Me.ContraseñaTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.ContraseñaTextBox.Location = New System.Drawing.Point(191, 371)
+        Me.ContraseñaTextBox.Location = New System.Drawing.Point(221, 345)
         Me.ContraseñaTextBox.MaxLength = 255
         Me.ContraseñaTextBox.Name = "ContraseñaTextBox"
         Me.ContraseñaTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -164,7 +165,7 @@ Partial Class FUser
         Me.NivelComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.NivelComboBox.FormattingEnabled = True
         Me.NivelComboBox.Items.AddRange(New Object() {"01", "02", "03", "04"})
-        Me.NivelComboBox.Location = New System.Drawing.Point(191, 417)
+        Me.NivelComboBox.Location = New System.Drawing.Point(221, 391)
         Me.NivelComboBox.Name = "NivelComboBox"
         Me.NivelComboBox.Size = New System.Drawing.Size(70, 39)
         Me.NivelComboBox.TabIndex = 10
@@ -176,7 +177,11 @@ Partial Class FUser
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CosechaTableAdapter = Nothing
+        Me.TableAdapterManager.CubetasTableAdapter = Nothing
         Me.TableAdapterManager.PersonalTableAdapter = Nothing
+        Me.TableAdapterManager.ProduccionTableAdapter = Nothing
+        Me.TableAdapterManager.ProductorTableAdapter = Nothing
         Me.TableAdapterManager.PuestoTableAdapter = Nothing
         Me.TableAdapterManager.SectorTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -185,17 +190,18 @@ Partial Class FUser
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(30, 180)
+        Me.Label1.BackColor = System.Drawing.Color.LightGreen
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(350, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(325, 35)
+        Me.Label1.Size = New System.Drawing.Size(361, 48)
         Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Ingresar un nuevo usuario:"
+        Me.Label1.Text = "Administrar usuarios"
         '
         'BNuevo
         '
         Me.BNuevo.BackColor = System.Drawing.Color.White
-        Me.BNuevo.Location = New System.Drawing.Point(32, 471)
+        Me.BNuevo.Location = New System.Drawing.Point(12, 472)
         Me.BNuevo.Name = "BNuevo"
         Me.BNuevo.Size = New System.Drawing.Size(99, 40)
         Me.BNuevo.TabIndex = 13
@@ -205,7 +211,7 @@ Partial Class FUser
         'BGuardar
         '
         Me.BGuardar.BackColor = System.Drawing.Color.White
-        Me.BGuardar.Location = New System.Drawing.Point(274, 471)
+        Me.BGuardar.Location = New System.Drawing.Point(241, 472)
         Me.BGuardar.Name = "BGuardar"
         Me.BGuardar.Size = New System.Drawing.Size(99, 40)
         Me.BGuardar.TabIndex = 15
@@ -215,7 +221,7 @@ Partial Class FUser
         'BEliminar
         '
         Me.BEliminar.BackColor = System.Drawing.Color.White
-        Me.BEliminar.Location = New System.Drawing.Point(150, 471)
+        Me.BEliminar.Location = New System.Drawing.Point(127, 472)
         Me.BEliminar.Name = "BEliminar"
         Me.BEliminar.Size = New System.Drawing.Size(99, 40)
         Me.BEliminar.TabIndex = 16
@@ -227,31 +233,15 @@ Partial Class FUser
         Me.Id_UsuariosTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_UsuariosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsuariosBindingSource, "id_Usuarios", True))
         Me.Id_UsuariosTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
-        Me.Id_UsuariosTextBox.Location = New System.Drawing.Point(191, 234)
+        Me.Id_UsuariosTextBox.Location = New System.Drawing.Point(221, 208)
         Me.Id_UsuariosTextBox.Name = "Id_UsuariosTextBox"
         Me.Id_UsuariosTextBox.ReadOnly = True
         Me.Id_UsuariosTextBox.Size = New System.Drawing.Size(100, 40)
         Me.Id_UsuariosTextBox.TabIndex = 17
         '
-        'BSalir
-        '
-        Me.BSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.BSalir.Image = CType(resources.GetObject("BSalir.Image"), System.Drawing.Image)
-        Me.BSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BSalir.Location = New System.Drawing.Point(461, 83)
-        Me.BSalir.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BSalir.Name = "BSalir"
-        Me.BSalir.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        Me.BSalir.Size = New System.Drawing.Size(200, 75)
-        Me.BSalir.TabIndex = 18
-        Me.BSalir.Text = "Regresar"
-        Me.BSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BSalir.UseVisualStyleBackColor = False
-        '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.MintCream
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(29, 11)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -266,16 +256,18 @@ Partial Class FUser
         Me.UsuariosDataGridView.AllowUserToAddRows = False
         Me.UsuariosDataGridView.AllowUserToDeleteRows = False
         Me.UsuariosDataGridView.AutoGenerateColumns = False
+        Me.UsuariosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.UsuariosDataGridView.BackgroundColor = System.Drawing.Color.LightGreen
         Me.UsuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UsuariosDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.nivel})
         Me.UsuariosDataGridView.DataSource = Me.UsuariosBindingSource
-        Me.UsuariosDataGridView.Location = New System.Drawing.Point(461, 199)
+        Me.UsuariosDataGridView.Location = New System.Drawing.Point(475, 176)
         Me.UsuariosDataGridView.Name = "UsuariosDataGridView"
         Me.UsuariosDataGridView.ReadOnly = True
         Me.UsuariosDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.UsuariosDataGridView.RowHeadersVisible = False
         Me.UsuariosDataGridView.RowTemplate.Height = 24
-        Me.UsuariosDataGridView.Size = New System.Drawing.Size(455, 257)
+        Me.UsuariosDataGridView.Size = New System.Drawing.Size(500, 360)
         Me.UsuariosDataGridView.TabIndex = 28
         '
         'DataGridViewTextBoxColumn1
@@ -301,29 +293,38 @@ Partial Class FUser
         '
         'BCancelar
         '
-        Me.BCancelar.Location = New System.Drawing.Point(393, 471)
+        Me.BCancelar.Location = New System.Drawing.Point(350, 472)
         Me.BCancelar.Name = "BCancelar"
         Me.BCancelar.Size = New System.Drawing.Size(99, 40)
         Me.BCancelar.TabIndex = 29
         Me.BCancelar.Text = "Cancelar"
         Me.BCancelar.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.LightGreen
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(989, 173)
+        Me.Panel1.TabIndex = 30
+        '
         'FUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(982, 543)
         Me.Controls.Add(Me.BCancelar)
         Me.Controls.Add(Me.UsuariosDataGridView)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.BSalir)
         Me.Controls.Add(Id_UsuariosLabel)
         Me.Controls.Add(Me.Id_UsuariosTextBox)
         Me.Controls.Add(Me.BEliminar)
         Me.Controls.Add(Me.BGuardar)
         Me.Controls.Add(Me.BNuevo)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(UsuarioLabel)
         Me.Controls.Add(Me.UsuarioTextBox)
         Me.Controls.Add(NombreLabel)
@@ -332,6 +333,7 @@ Partial Class FUser
         Me.Controls.Add(Me.ContraseñaTextBox)
         Me.Controls.Add(NivelLabel)
         Me.Controls.Add(Me.NivelComboBox)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FUser"
         Me.Text = "Catalogo de Usuarios"
@@ -339,6 +341,8 @@ Partial Class FUser
         CType(Me.ArandanosDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsuariosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -357,11 +361,11 @@ Partial Class FUser
     Friend WithEvents BGuardar As Button
     Friend WithEvents BEliminar As Button
     Friend WithEvents Id_UsuariosTextBox As TextBox
-    Friend WithEvents BSalir As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents UsuariosDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents nivel As DataGridViewTextBoxColumn
     Friend WithEvents BCancelar As Button
+    Friend WithEvents Panel1 As Panel
 End Class

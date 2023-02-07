@@ -18,6 +18,19 @@
             MsgBox("Fallo la conexion", vbCritical)
         End Try
     End Sub
+
+    Private Sub Block()
+        PersonalDataGridView.Enabled = False
+        BNuevo.Visible = False
+        BEliminar.Visible = False
+        Id_PersonalTextBox.Enabled = True
+    End Sub
+    Private Sub DesBlock()
+        PersonalDataGridView.Enabled = True
+        BNuevo.Visible = True
+        BEliminar.Visible = True
+        Id_PersonalTextBox.Enabled = False
+    End Sub
     Private Sub BNuevo_Click(sender As Object, e As EventArgs) Handles BNuevo.Click
         PersonalBindingSource.AddNew() 'Se selecciona la tabla a la que haremos referencia y añadimos una nueva fila'
         Id_PersonalTextBox.Focus()     'Apuntaremos a la caja de texto de ID_Personal'

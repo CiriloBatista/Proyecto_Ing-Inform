@@ -37,8 +37,6 @@ Partial Class FPersonal
         Me.ApellidoTextBox = New System.Windows.Forms.TextBox()
         Me.Id_PuestoTextBox = New System.Windows.Forms.TextBox()
         Me.PersonalDataGridView = New System.Windows.Forms.DataGridView()
-        Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BNuevo = New System.Windows.Forms.Button()
         Me.BCancelar = New System.Windows.Forms.Button()
         Me.BGuardar = New System.Windows.Forms.Button()
@@ -47,6 +45,10 @@ Partial Class FPersonal
         Me.PersonalTableAdapter = New SisProduccion.arandanosDataSetTableAdapters.PersonalTableAdapter()
         Me.TableAdapterManager = New SisProduccion.arandanosDataSetTableAdapters.TableAdapterManager()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id_Puesto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         IdLabel = New System.Windows.Forms.Label()
         Id_PersonalLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
@@ -62,7 +64,7 @@ Partial Class FPersonal
         '
         IdLabel.AutoSize = True
         IdLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        IdLabel.Location = New System.Drawing.Point(143, 239)
+        IdLabel.Location = New System.Drawing.Point(143, 201)
         IdLabel.Name = "IdLabel"
         IdLabel.Size = New System.Drawing.Size(52, 35)
         IdLabel.TabIndex = 1
@@ -72,7 +74,7 @@ Partial Class FPersonal
         '
         Id_PersonalLabel.AutoSize = True
         Id_PersonalLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Id_PersonalLabel.Location = New System.Drawing.Point(36, 287)
+        Id_PersonalLabel.Location = New System.Drawing.Point(36, 249)
         Id_PersonalLabel.Name = "Id_PersonalLabel"
         Id_PersonalLabel.Size = New System.Drawing.Size(158, 35)
         Id_PersonalLabel.TabIndex = 3
@@ -82,7 +84,7 @@ Partial Class FPersonal
         '
         NombreLabel.AutoSize = True
         NombreLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        NombreLabel.Location = New System.Drawing.Point(78, 333)
+        NombreLabel.Location = New System.Drawing.Point(78, 295)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(116, 35)
         NombreLabel.TabIndex = 5
@@ -92,7 +94,7 @@ Partial Class FPersonal
         '
         ApellidoLabel.AutoSize = True
         ApellidoLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        ApellidoLabel.Location = New System.Drawing.Point(78, 380)
+        ApellidoLabel.Location = New System.Drawing.Point(78, 342)
         ApellidoLabel.Name = "ApellidoLabel"
         ApellidoLabel.Size = New System.Drawing.Size(117, 35)
         ApellidoLabel.TabIndex = 7
@@ -102,7 +104,7 @@ Partial Class FPersonal
         '
         Id_PuestoLabel.AutoSize = True
         Id_PuestoLabel.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Id_PuestoLabel.Location = New System.Drawing.Point(59, 426)
+        Id_PuestoLabel.Location = New System.Drawing.Point(59, 388)
         Id_PuestoLabel.Name = "Id_PuestoLabel"
         Id_PuestoLabel.Size = New System.Drawing.Size(136, 35)
         Id_PuestoLabel.TabIndex = 9
@@ -114,7 +116,7 @@ Partial Class FPersonal
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "Id", True))
         Me.IdTextBox.Enabled = False
         Me.IdTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
-        Me.IdTextBox.Location = New System.Drawing.Point(206, 232)
+        Me.IdTextBox.Location = New System.Drawing.Point(206, 194)
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.ReadOnly = True
         Me.IdTextBox.Size = New System.Drawing.Size(100, 40)
@@ -135,7 +137,7 @@ Partial Class FPersonal
         Me.Id_PersonalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_PersonalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "Id_Personal", True))
         Me.Id_PersonalTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
-        Me.Id_PersonalTextBox.Location = New System.Drawing.Point(205, 283)
+        Me.Id_PersonalTextBox.Location = New System.Drawing.Point(205, 245)
         Me.Id_PersonalTextBox.MaxLength = 3
         Me.Id_PersonalTextBox.Name = "Id_PersonalTextBox"
         Me.Id_PersonalTextBox.Size = New System.Drawing.Size(100, 40)
@@ -146,7 +148,7 @@ Partial Class FPersonal
         Me.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "nombre", True))
         Me.NombreTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
-        Me.NombreTextBox.Location = New System.Drawing.Point(206, 330)
+        Me.NombreTextBox.Location = New System.Drawing.Point(206, 292)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(200, 40)
         Me.NombreTextBox.TabIndex = 6
@@ -156,7 +158,7 @@ Partial Class FPersonal
         Me.ApellidoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "apellido", True))
         Me.ApellidoTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
-        Me.ApellidoTextBox.Location = New System.Drawing.Point(206, 376)
+        Me.ApellidoTextBox.Location = New System.Drawing.Point(206, 338)
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
         Me.ApellidoTextBox.Size = New System.Drawing.Size(200, 40)
         Me.ApellidoTextBox.TabIndex = 8
@@ -168,7 +170,7 @@ Partial Class FPersonal
         Me.Id_PuestoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Id_PuestoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PersonalBindingSource, "id_Puesto", True))
         Me.Id_PuestoTextBox.Font = New System.Drawing.Font("Comic Sans MS", 14.0!)
-        Me.Id_PuestoTextBox.Location = New System.Drawing.Point(206, 422)
+        Me.Id_PuestoTextBox.Location = New System.Drawing.Point(206, 384)
         Me.Id_PuestoTextBox.MaxLength = 2
         Me.Id_PuestoTextBox.Name = "Id_PuestoTextBox"
         Me.Id_PuestoTextBox.Size = New System.Drawing.Size(100, 40)
@@ -179,38 +181,24 @@ Partial Class FPersonal
         Me.PersonalDataGridView.AllowUserToAddRows = False
         Me.PersonalDataGridView.AllowUserToDeleteRows = False
         Me.PersonalDataGridView.AutoGenerateColumns = False
+        Me.PersonalDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.PersonalDataGridView.BackgroundColor = System.Drawing.Color.LightGreen
         Me.PersonalDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.PersonalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PersonalDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.apellido, Me.DataGridViewTextBoxColumn3})
+        Me.PersonalDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.apellido, Me.id_Puesto})
         Me.PersonalDataGridView.DataSource = Me.PersonalBindingSource
-        Me.PersonalDataGridView.Location = New System.Drawing.Point(455, 181)
+        Me.PersonalDataGridView.Location = New System.Drawing.Point(471, 174)
         Me.PersonalDataGridView.Name = "PersonalDataGridView"
         Me.PersonalDataGridView.ReadOnly = True
         Me.PersonalDataGridView.RowHeadersVisible = False
         Me.PersonalDataGridView.RowTemplate.Height = 24
         Me.PersonalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.PersonalDataGridView.Size = New System.Drawing.Size(424, 280)
+        Me.PersonalDataGridView.Size = New System.Drawing.Size(500, 360)
         Me.PersonalDataGridView.TabIndex = 11
-        '
-        'apellido
-        '
-        Me.apellido.DataPropertyName = "apellido"
-        Me.apellido.HeaderText = "Apellido"
-        Me.apellido.Name = "apellido"
-        Me.apellido.ReadOnly = True
-        Me.apellido.Width = 150
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Nombre"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 150
         '
         'BNuevo
         '
-        Me.BNuevo.Location = New System.Drawing.Point(38, 480)
+        Me.BNuevo.Location = New System.Drawing.Point(19, 473)
         Me.BNuevo.Name = "BNuevo"
         Me.BNuevo.Size = New System.Drawing.Size(99, 40)
         Me.BNuevo.TabIndex = 12
@@ -219,7 +207,7 @@ Partial Class FPersonal
         '
         'BCancelar
         '
-        Me.BCancelar.Location = New System.Drawing.Point(378, 480)
+        Me.BCancelar.Location = New System.Drawing.Point(359, 473)
         Me.BCancelar.Name = "BCancelar"
         Me.BCancelar.Size = New System.Drawing.Size(99, 40)
         Me.BCancelar.TabIndex = 13
@@ -228,7 +216,7 @@ Partial Class FPersonal
         '
         'BGuardar
         '
-        Me.BGuardar.Location = New System.Drawing.Point(262, 480)
+        Me.BGuardar.Location = New System.Drawing.Point(129, 473)
         Me.BGuardar.Name = "BGuardar"
         Me.BGuardar.Size = New System.Drawing.Size(99, 40)
         Me.BGuardar.TabIndex = 14
@@ -237,7 +225,7 @@ Partial Class FPersonal
         '
         'BEliminar
         '
-        Me.BEliminar.Location = New System.Drawing.Point(149, 480)
+        Me.BEliminar.Location = New System.Drawing.Point(244, 473)
         Me.BEliminar.Name = "BEliminar"
         Me.BEliminar.Size = New System.Drawing.Size(99, 40)
         Me.BEliminar.TabIndex = 15
@@ -246,13 +234,16 @@ Partial Class FPersonal
         '
         'Label1
         '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(32, 175)
+        Me.Label1.BackColor = System.Drawing.Color.LightGreen
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(350, 60)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(329, 35)
+        Me.Label1.Size = New System.Drawing.Size(362, 48)
         Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Administración de Personal"
+        Me.Label1.Text = "Administrar personal"
         '
         'PersonalTableAdapter
         '
@@ -282,13 +273,45 @@ Partial Class FPersonal
         Me.PictureBox2.TabIndex = 18
         Me.PictureBox2.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.LightGreen
+        Me.Panel1.Location = New System.Drawing.Point(-6, -5)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(989, 173)
+        Me.Panel1.TabIndex = 20
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'apellido
+        '
+        Me.apellido.DataPropertyName = "apellido"
+        Me.apellido.HeaderText = "Apellido"
+        Me.apellido.Name = "apellido"
+        Me.apellido.ReadOnly = True
+        '
+        'id_Puesto
+        '
+        Me.id_Puesto.DataPropertyName = "id_Puesto"
+        Me.id_Puesto.HeaderText = "Id Puesto"
+        Me.id_Puesto.Name = "id_Puesto"
+        Me.id_Puesto.ReadOnly = True
+        '
         'FPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.MintCream
         Me.ClientSize = New System.Drawing.Size(982, 543)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BEliminar)
         Me.Controls.Add(Me.BGuardar)
         Me.Controls.Add(Me.BCancelar)
@@ -304,6 +327,7 @@ Partial Class FPersonal
         Me.Controls.Add(Me.ApellidoTextBox)
         Me.Controls.Add(Id_PuestoLabel)
         Me.Controls.Add(Me.Id_PuestoTextBox)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FPersonal"
         Me.Text = "Administración de Personal"
@@ -326,12 +350,14 @@ Partial Class FPersonal
     Friend WithEvents ApellidoTextBox As TextBox
     Friend WithEvents Id_PuestoTextBox As TextBox
     Friend WithEvents PersonalDataGridView As DataGridView
-    Friend WithEvents apellido As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents BNuevo As Button
     Friend WithEvents BCancelar As Button
     Friend WithEvents BGuardar As Button
     Friend WithEvents BEliminar As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents apellido As DataGridViewTextBoxColumn
+    Friend WithEvents id_Puesto As DataGridViewTextBoxColumn
 End Class

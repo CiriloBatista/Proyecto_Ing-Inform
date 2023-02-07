@@ -17,10 +17,10 @@
 
     Private Sub Compara()
         If passwordTextBox.Text = "" Then
-            MsgBox("No existe el usuario")
+            MsgBox("No existe el usuario", vbExclamation + vbOKOnly, "A T E N C I Ó N !")
         Else
             If passwordTextBox.Text = ContrasenaTextBox.Text Then
-                MsgBox("Bienvenido " & UsuarioTextBox.Text) 'El simbolo "&" concatena texto con funciones'
+                MsgBox("Bienvenido " & UsuarioTextBox.Text, vbInformation, "Hola") 'El simbolo "&" concatena texto con funciones'
                 IdUsr = Id_UsuariosTextBox.Text '
                 User = UsuarioTextBox.Text      ' Guardarán que usuario fue el que inicio sesión '
                 Niv = NivelComboBox.Text        '
@@ -28,7 +28,7 @@
                 passwordTextBox.Text = ""   ' 
                 FMenuP.Show()  ' Muestra el formulario de menu '
             Else
-                MsgBox("Usuario o Contraseña no validos") 'Podemos ver el video 8 de la sesion extra!'
+                MsgBox("¡Usuario o Contraseña no validos!", vbExclamation + vbOKOnly, "A T E N C I Ó N !") 'Podemos ver el video 8 de la sesion extra!'
             End If
         End If
     End Sub
@@ -71,7 +71,7 @@
             Me.UsuariosTableAdapter.FillByUsuario(Me.ArandanosDataSet.Usuarios, usuario_textBox.Text)
             Compara()
         Else
-            MsgBox("Faltan datos por ingresar")
+            MsgBox("¡Faltan datos por ingresar!", vbExclamation + vbOKOnly, "A T E N C I Ó N !")
         End If
     End Sub
 

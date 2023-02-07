@@ -11,13 +11,24 @@
         Actualiza()
     End Sub
 
+    Private Sub Block()
+        UsuariosDataGridView.Enabled = False
+        BNuevo.Visible = False
+        BEliminar.Visible = False
+        Id_UsuariosTextBox.Enabled = True
+    End Sub
+    Private Sub DesBlock()
+        UsuariosDataGridView.Enabled = True
+        BNuevo.Visible = True
+        BEliminar.Visible = True
+        Id_UsuariosTextBox.Enabled = False
+    End Sub
+
     Private Sub FButtonGuardar_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.UsuariosBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.ArandanosDataSet)
-
     End Sub
-
     Private Sub Actualiza()
         Try 'Es una funcion que nos ayuda a controlar que no caiga el sistema'
             Me.UsuariosTableAdapter.Fill(Me.ArandanosDataSet.Usuarios) 'Actualiza el los datos de la tabla'
@@ -66,12 +77,6 @@
             End Try
         End If
     End Sub
-
-    Private Sub BSalir_Click(sender As Object, e As EventArgs) Handles BSalir.Click
-        Me.Close()
-        FMenuP.Show()
-    End Sub
-
     Private Sub BCancelar_Click(sender As Object, e As EventArgs) Handles BCancelar.Click
         UsuariosBindingSource.CancelEdit() 'Se selecciona la tabla a la que haremos referencia y ponemos para cancelar'
     End Sub

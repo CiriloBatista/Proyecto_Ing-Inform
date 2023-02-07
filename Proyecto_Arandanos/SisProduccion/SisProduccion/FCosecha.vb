@@ -12,6 +12,18 @@
         Actualiza()
     End Sub
 
+    Private Sub Block()
+        CosechaDataGridView.Enabled = False
+        BNuevo.Visible = False
+        BEliminar.Visible = False
+        Id_PersonalTextBox.Enabled = True
+    End Sub
+    Private Sub DesBlock()
+        CosechaDataGridView.Enabled = True
+        BNuevo.Visible = True
+        BEliminar.Visible = True
+        Id_PersonalTextBox.Enabled = False
+    End Sub
     Private Sub Actualiza()
         Try 'Es una funcion que nos ayuda a controlar que no caiga el sistema'
             Me.CosechaTableAdapter.Fill(Me.ArandanosDataSet.Cosecha) 'Actualiza el los datos de la tabla'

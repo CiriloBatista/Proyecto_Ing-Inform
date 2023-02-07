@@ -11,6 +11,19 @@
         Actualiza()
     End Sub
 
+    Private Sub Block()
+        CubetasDataGridView.Enabled = False
+        BNuevo.Visible = False
+        BEliminar.Visible = False
+        Id_PersonalTextBox.Enabled = True
+    End Sub
+    Private Sub DesBlock()
+        CubetasDataGridView.Enabled = True
+        BNuevo.Visible = True
+        BEliminar.Visible = True
+        Id_PersonalTextBox.Enabled = False
+    End Sub
+
     Private Sub Actualiza()
         Try 'Es una funcion que nos ayuda a controlar que no caiga el sistema'
             Me.CubetasTableAdapter.Fill(Me.ArandanosDataSet.Cubetas) 'Actualiza el los datos de la tabla'
@@ -70,4 +83,5 @@
     Private Sub CubetaTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles NombreTextBox.KeyPress 'Evento KeyPress revisa letra por letra'
         e.Handled = Not Char.IsNumber(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsSeparator(e.KeyChar) And Not Char.IsPunctuation(e.KeyChar) 'e.Handled solo se puede usar en KeyPress'
     End Sub
+
 End Class
